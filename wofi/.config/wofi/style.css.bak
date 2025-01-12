@@ -45,7 +45,6 @@
 @define-color	surface0  #313244;
 @define-color	surface0-rgb  rgb(49, 50, 68);
 @define-color	base  #1e1e2e;
-@define-color   base-selected #161620;
 @define-color	base-rgb  rgb(30, 30, 46);
 @define-color	mantle  #181825;
 @define-color	mantle-rgb  rgb(24, 24, 37);
@@ -61,15 +60,16 @@
 window {
   margin: 0px;
   padding: 10px;
-  border: 2px solid @rosewater;
+  border: 1px solid @lavender;
   border-radius: 8px;
   background-color: @base;
 }
 
 /* Inner Box */
 #inner-box {
-  margin: 0px 5px;
+  margin: 5px;
   padding: 10px;
+  border: none;
   background-color: @base;
 }
 
@@ -91,7 +91,7 @@ window {
 
 /* Input */
 #input {
-  margin: 5px 20px 0px 20px;
+  margin: 5px 20px;
   padding: 10px;
   border: none;
   border-radius: 0.1em;
@@ -104,38 +104,36 @@ window {
     color: @red;
 }
 
+#input:focus {
+	outline: none;
+	border: none;
+}
+
 /* Text */
 #text {
-  margin: 0px 8px;
+  margin: 5px;
   border: none;
   color: @text;
 }
 
 #entry {
-  padding: 0.5em 0.5em;
   background-color: @base;
-  transition: 0.2s all ease-in-out, 0.2s background-color ease-in-out;
 }
 
 #entry arrow {
   border: none;
-  color: @rosewater;
+  color: @lavender;
 }
 
 /* Selected Entry */
 #entry:selected {
-  background-color: @base-selected;
-  padding: 0.5em 1em;
-}
-
-#entry:hover {
-	background-color: @rosewater;
+  border: 0.11em solid @lavender;
 }
 
 #entry:selected #text {
-  color: @rosewater;
+  color: @mauve;
 }
 
 #entry:drop(active) {
-  background-color: @rosewater!important;
+  background-color: @lavender!important;
 }
