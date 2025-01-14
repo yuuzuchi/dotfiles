@@ -790,6 +790,7 @@ require('lazy').setup({
     'catgoose/nvim-colorizer.lua',
     event = 'BufReadPre',
     opts = {
+      filetypes = { '*' },
       tailwind = true,
       rgb_fn = true,
       hsl_fn = true,
