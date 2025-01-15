@@ -152,7 +152,7 @@ progressbar {
   /* Buttons menu */
 .widget-buttons-grid {
   font-size: x-large;
-  padding: 6px 2px;
+  padding: 6px 6px;
   margin: 6px;
   border-radius: 12px;
   background: alpha(@background-alt, 0.6);
@@ -166,7 +166,7 @@ progressbar {
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button:hover {
-  background: @hover;
+  background: alpha(@hover, 0.4);
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button:checked {
