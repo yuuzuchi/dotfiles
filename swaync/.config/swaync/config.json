@@ -35,10 +35,9 @@
       "actions": [
         {
           "active": false,
-          "command": "notify-send 'hey'",
-          "label": "󰤄",
-          "type": "toggle",
-          "update_command": "notify-send 'Hi'"
+          "command": "/home/yuzu/.config/rofi/launchers/wifimenu.sh",
+          "label": "",
+          "type": "button"
         },
         {
           "active": false,
