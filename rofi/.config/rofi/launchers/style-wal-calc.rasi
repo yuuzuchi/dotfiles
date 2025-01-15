@@ -69,6 +69,7 @@ inputbar {
     background-image:            @wallpaper;
     text-color:                  @foreground;
     orientation:                 horizontal;
+    num-rows:                    5;
     children:                    [ "textbox-prompt-colon", "entry", "dummy" ];
 }
 textbox-prompt-colon {

@@ -4,3 +4,8 @@
 
 killall -SIGUSR2 waybar
 pywalfox update
+swaync-client -C
+swaync-client -rs
+swaync-client -R
+
+
