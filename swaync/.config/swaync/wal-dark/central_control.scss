@@ -22,21 +22,56 @@
 /* CONTROL CENTER ------------------------------------------------------------------------ */
 
 .control-center {
-  background: alpha(@background, .90);
+  background: alpha(@background, 0.90);
   border-radius: 24px;
-  border: 1px solid alpha(@foreground, 0.2);
-  box-shadow: 0 0 10px 0 rgba(0,0,0,.6);
+  border: 2px solid alpha(@foreground, 0.07);
   margin: 18px;
   padding: 12px;
+  box-shadow: 0px 0px 30px mix(@background, #000000, 0.2);
+}
+
+.control-center .control-center-list-placeholder {
+  /* The placeholder when there are no notifications */
+  opacity: 0.5;
 }
 
 /* Notifications  */
-.control-center .notification-row .notification-background,
-.control-center .notification-row .notification-background .notification.critical {
-  background-color: mix(@background-alt, #000000, 0.2);
+.control-center .notification-row {
+  outline: none;
+}
+
+.control-center .notification-row .notification-background {
+  padding: 4px 0px;
+}
+
+.control-center .control-center-list .notification {
+  box-shadow: 0px 0px 2px mix(@background, @color1, 0.15);
+}
+
+.control-center .notification-row .notification-background .notification {
+  background: mix(@color1, @background, 0.7);
   border-radius: 16px;
-  margin: 4px 0px;
+  border: 1px solid alpha(@foreground, 0.1);
+  /*margin: 4px 0px;
+  padding: 4px; */
+  padding: 0;
+  transition: background 0.15s ease-in-out;
+}
+.control-center .notification-row .notification-background .notification .notification-action, .notification-row .notification-background .notification .notification-default-action {
+  border-radius: 16px;
   padding: 4px;
+  margin: 0;
+  box-shadow: none;
+  background: transparent;
+  border: none;
+  color: @text-color;
+  transition: background 0.15s ease-in-out;
+}
+
+.control-center .notification-row .notification-background .notification .notification-action:hover, .notification-row .notification-background .notification .notification-default-action:hover {
+  -gtk-icon-effect: none;
+  background: mix(@color1, @background, 0.62);
+  border-radius: 16px;
 }
 
 .control-center .notification-row .notification-background .notification.critical {
@@ -44,7 +79,7 @@
 }
 
 .control-center .notification-row .notification-background .notification .notification-content {
-  margin: 6px;
+  margin: 6px 6px 10px 10px;
   padding: 8px 6px 2px 2px;
 }
 
@@ -53,7 +88,7 @@
 }
 
 .control-center .notification-row .notification-background .notification > *:last-child > * .notification-action {
-  background: alpha(@selected, .6);
+  background: alpha(@selected, 1);
   color: @text;
   border-radius: 12px;
   margin: 6px;
@@ -156,6 +191,7 @@ progressbar {
   margin: 6px;
   border-radius: 12px;
   background: alpha(@background-alt, 0.6);
+  box-shadow: 0px 0px 10px mix(@background, @color1, 0.15);
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button {
@@ -183,6 +219,7 @@ progressbar {
     border-radius: 16px;
     color: @text;
     margin:  20px 6px;
+    box-shadow: 0px 0px 10px mix(@background, @color1, 0.15);
 }
 
   /* NOTE: Background need *opacity 1* otherwise will turn into the album art blurred  */
@@ -204,6 +241,7 @@ progressbar {
 
 .widget-mpris button:hover {
   color: @text;
+  background: @hover;
 }
 
 .widget-mpris-album-art {
