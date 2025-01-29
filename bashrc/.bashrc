@@ -2,6 +2,9 @@
 # ~/.bashrc
 #
 
+# draw bnuuy
+printf "($(tput setaf 4)\\$(tput sgr0)($(tput setaf 4)\\$(tput sgr0) \n( o$(tput setaf 1).$(tput sgr0)o) \no($(tput setaf 1)\"$(tput sgr0))($(tput setaf 1)\"$(tput sgr0))\n\n"
+
 eval "$(starship init bash)"
 
 # If not running interactively, don't do anything

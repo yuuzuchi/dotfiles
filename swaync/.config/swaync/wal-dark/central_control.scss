@@ -22,12 +22,12 @@
 /* CONTROL CENTER ------------------------------------------------------------------------ */
 
 .control-center {
-  background: alpha(@background, 0.90);
+  background: alpha(@background, 0.80);
   border-radius: 24px;
   border: 2px solid alpha(@foreground, 0.07);
   margin: 18px;
   padding: 12px;
-  box-shadow: 0px 0px 30px mix(@background, #000000, 0.2);
+  box-shadow: 0px 0px 7px mix(@background, #000000, 0.2);
 }
 
 .control-center .control-center-list-placeholder {
@@ -162,7 +162,36 @@ progressbar {
 }  
 
 /* WIDGETS --------------------------------------------------------------------------- */
+/* Do not disturb */
+.widget-dnd {
+  margin: 6px;
+  font-size: 1.2rem;
+}
 
+.widget-dnd > switch {
+  background: mix(@background, @background-alt, 0.2);
+  font-size: initial;
+  border-radius: 8px;
+  box-shadow: none;
+  padding: 2px;
+}
+
+.widget-dnd > switch:hover {
+  background: @hover;
+}
+
+.widget-dnd > switch:checked {
+  background: mix(@hover, @selected, 0.4);
+}
+
+.widget-dnd > switch:checked:hover {
+  background: mix(@hover, @selected, 0.55);
+}
+
+.widget-dnd > switch slider {
+  background: @text;
+  border-radius: 6px;
+}
   /* Notification clear button */
 .widget-title {
   font-size: 1.2em;

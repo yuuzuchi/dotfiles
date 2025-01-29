@@ -777,12 +777,22 @@ require('lazy').setup({
     end,
   },
 
+  --[[
   { -- Supermaven
     {
       'supermaven-inc/supermaven-nvim',
       config = function()
         require('supermaven-nvim').setup {}
       end,
+    },
+  },
+  ]]
+  --
+
+  { -- Copilot
+    {
+      'github/copilot.vim',
+      event = 'InsertEnter',
     },
   },
 
