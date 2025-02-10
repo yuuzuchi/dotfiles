@@ -20,6 +20,7 @@ alias vi='nvim'
 alias v='nvim'
 alias ls='ls_extended'
 alias ..='cd ..'
+alias sleep='systemctl suspend'
 
 export wallpaper="$HOME/Wallpapers/tokyo-night-girl.png"
 
@@ -27,6 +28,8 @@ export wallpaper="$HOME/Wallpapers/tokyo-night-girl.png"
 eval "$(zoxide init bash)"
 
 alias cd='z'
+alias rin='yay'
+alias rinyay='yay'
 
 function cdl() {
 	cd "$1" && ls
