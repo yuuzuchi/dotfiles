@@ -83,6 +83,7 @@ tooltip label {
 /* #custom-backlight, */
 #backlight,
 #battery,
+#power-profiles-daemon
 #custom-power {
   opacity: 1;
   color: @module-fg;
@@ -354,7 +355,8 @@ tooltip label {
   background: @backlight;
   padding-left: 2px;
 }
-#battery {
+#battery,
+#power-profiles-daemon{
   color: @module-fg;
   background: @battery;
 }

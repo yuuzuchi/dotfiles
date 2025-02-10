@@ -61,6 +61,7 @@
 
     "custom/left8",
     "battery",              // battery
+    "power-profiles-daemon",
 
     "custom/leftin2",
     "custom/power"          // power button
@@ -420,6 +421,17 @@
     "min-length": 6,
     "max-length": 6
   },
+
+  "power-profiles-daemon": {
+        "format": "{icon} ",
+        "tooltip": false,
+        "format-icons": {
+            "default": "",
+            "performance": "", 
+            "balanced": "",
+            "power-saver": ""
+        }
+    },
 
   "custom/power": {
     "format": " ",
