@@ -30,7 +30,10 @@ eval "$(zoxide init bash)"
 alias cd='z'
 alias rin='yay'
 alias rinyay='yay'
+alias otd='systemctl enable --user --now opentabletdriver'
 
 function cdl() {
 	cd "$1" && ls
 }
+export PATH=/home/yuzu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+export PATH=/home/yuzu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
