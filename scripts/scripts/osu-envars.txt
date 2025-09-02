@@ -1,0 +1,2 @@
+osuWINELOADER=/home/yuzu/.local/share/osuconfig/proton-osu/files/bin/wine
+WINEPREFIX=/home/yuzu/.local/share/wineprefixes/osu-wineprefix/pfx/
