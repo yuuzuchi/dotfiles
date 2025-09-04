@@ -27,11 +27,11 @@ get_cpu_temperature() {
 # Get the corresponding icon based on temperature
 get_temperature_icon() {
   temp_value=$1
-  if [ "$temp_value" -ge 80 ]; then
+  if (( $(echo "$temp_value >= 80" | bc -l) )); then
     icon="󰸁" # High temperature
-  elif [ "$temp_value" -ge 70 ]; then
+  elif (( $(echo "$temp_value >= 70" | bc -l) )); then
     icon="󱃂" # Medium temperature
-  elif [ "$temp_value" -ge 60 ]; then
+  elif (( $(echo "$temp_value >= 60" | bc -l) )); then
     icon="󰔏" # Normal temperature
   else
     icon="󱃃" # Low temperature
@@ -49,7 +49,7 @@ temp_f=$(echo "$temp_info" | awk '{print $2}') # Fahrenheit
 thermo_icon=$(get_temperature_icon "$temp")
 
 # Set color based on temperature
-if [ "$temp" -ge 80 ]; then
+if (( $(echo "temp >= 80" | bc -l) )); then
   # If temperature is >= 80%, set color to #f38ba8
   text_output="<span color='#f38ba8'>${thermo_icon} ${temp}°C</span>"
 else
