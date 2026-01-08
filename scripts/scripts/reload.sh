@@ -7,4 +7,4 @@ killall waybar
 #pywalfox update
 swaync-client -rs
 swaync-client -R
-waybar &
+waybar > /dev/null & disown

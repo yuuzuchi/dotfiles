@@ -6,8 +6,6 @@ IMAGE_DIR="$HOME/Wallpapers"
 LINK_DEST="$HOME/.config/wallpaper"
 # Desired width for smaller image
 SMALL_WIDTH=800
-# Monitor to use
-monitor=$(hyprctl monitors | grep Monitor | awk '{print $2}')
 
 # Create the destination directory if it doesn't exist
 mkdir -p "$LINK_DEST"
@@ -40,10 +38,18 @@ magick "$RANDOM_IMAGE" -resize "${SMALL_WIDTH}x" "$LINK_DEST/current_wallpaper_s
 echo "New wallpaper set: $RANDOM_IMAGE"
 echo "Small wallpaper set: $LINK_DEST/current_wallpaper_small"
 
-# Set the wallpaper
-hyprctl hyprpaper unload all > /dev/null
-hyprctl hyprpaper preload "$RANDOM_IMAGE" > /dev/null
-hyprctl hyprpaper wallpaper "$monitor, $RANDOM_IMAGE" > /dev/null
-
 # Pywal
 wal -i "$RANDOM_IMAGE" -o "$HOME/scripts/reload.sh" --cols16 lighten --contrast 2.5
+
+hyprctl hyprpaper unload all > /dev/null
+for monitor in $(hyprctl monitors | grep 'Monitor' | awk '{ print $2 }'); do
+    # Set the wallpaper
+    hyprctl hyprpaper preload "$RANDOM_IMAGE" > /dev/null
+    hyprctl hyprpaper wallpaper "$monitor, $RANDOM_IMAGE" > /dev/null
+    echo $monitor
+done
+
+# swaybg
+swaybg -i "$RANDOM_IMAGE" -m fill> /dev/null & disown
+
+exit
