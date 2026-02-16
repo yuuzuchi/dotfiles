@@ -42,3 +42,6 @@ function cdl() {
 }
 export PATH=/home/yuzu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
 export PATH=/home/yuzu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+
+# Created by `pipx` on 2026-01-14 00:27:58
+export PATH="$PATH:/home/yuzu/.local/bin"

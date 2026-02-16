@@ -3,7 +3,5 @@ import "./modules/bar/components"
 import Quickshell
 
 Scope {
-    Bar {
-    }
-
+    Bar {}
 }
